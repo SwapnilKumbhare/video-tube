@@ -1,61 +1,44 @@
 <!-- Home Section -->
 <header id="home-section">
-    <div class="dark-overlay">
-        <div class="home-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 d-none d-lg-block">
-                        <h1 class="display-4">Breif Description about your prototype</h1>
-                        <div class="d-flex flex-row">
-                            <div class="p-4 align-self-start">
-                                <i class="fa fa-check"></i>
-                            </div>
-                            <div class="p-4 align-self-end">
-                                Highlight key points for your prototype. Highlight key points for your prototype. Highlight key points for your prototype.
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div class="p-4 align-self-start">
-                                <i class="fa fa-check"></i>
-                            </div>
-                            <div class="p-4 align-self-end">
-                                Highlight key points for your prototype. Highlight key points for your prototype. Highlight key points for your prototype.
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div class="p-4 align-self-start">
-                                <i class="fa fa-check"></i>
-                            </div>
-                            <div class="p-4 align-self-end">
-                                Highlight key points for your prototype. Highlight key points for your prototype. Highlight key points for your prototype.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-success text-center card-form">
-                            <div class="card-body">
-                                <h3>Sign Up</h3>
-                                <p>Please fill out form to register</p>
-                                <form action="">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control form-control-lg" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-lg" placeholder="Username">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control form-control-lg" placeholder="Password">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control form-control-lg" placeholder="Confirm Password">
-                                    </div>
-                                    <input type="submit" class="btn btn-outline-light btn-block">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div class="dark-overlay">
+    <div class="home-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 d-none d-lg-block">
+            <h1 class="display-4">Breif Description about your prototype</h1>
+            <div class="d-flex flex-row">
+              <div class="p-4 align-self-start">
+                <i class="fa fa-check"></i>
+              </div>
+              <div class="p-4 align-self-end">
+                Highlight key points for your prototype. Highlight key points for your prototype. Highlight key points for your prototype.
+              </div>
             </div>
+            <div class="d-flex flex-row">
+              <div class="p-4 align-self-start">
+                <i class="fa fa-check"></i>
+              </div>
+              <div class="p-4 align-self-end">
+                Highlight key points for your prototype. Highlight key points for your prototype. Highlight key points for your prototype.
+              </div>
+            </div>
+            <div class="d-flex flex-row">
+              <div class="p-4 align-self-start">
+                <i class="fa fa-check"></i>
+              </div>
+              <div class="p-4 align-self-end">
+                Highlight key points for your prototype. Highlight key points for your prototype. Highlight key points for your prototype.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card bg-success text-center card-form">
+              <app-sign-in *ngIf="showSignIn" (showSignUpEvent)="showSignUpComponent()"></app-sign-in>
+              <app-sign-up *ngIf="!showSignIn" (showSignInEvent)="showSignInComponent()"></app-sign-up>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </header>
