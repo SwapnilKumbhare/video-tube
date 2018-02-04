@@ -1,0 +1,33 @@
+.carousel {
+    height: 500px;
+    width: 100%;
+}
+
+.library-content {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 30px;
+}
+
+.card-sec {
+    width: 450px;
+    display: inline-block;
+    background-color: #000;
+    .card {
+        background-color: #000;
+    }
+}
+
+.card-img-top {
+    width: 130px;
+    height: 130px;
+}
+
+.card-desc {
+    width: 302px;
+    height: 130px;
+}
