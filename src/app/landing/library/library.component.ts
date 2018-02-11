@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { EmbedVideoService } from '../../_shared/embed-video.service';
 
 @Component({
@@ -6,10 +6,11 @@ import { EmbedVideoService } from '../../_shared/embed-video.service';
     templateUrl: './library.component.html',
     styleUrls: ['./library.component.scss']
 })
-export class LibraryComponent implements OnInit {
+export class LibraryComponent implements OnInit, AfterViewInit {
 
     iframe_html: any;
     youtubeUrl = "https://www.youtube.com/watch?v=Jer8XjMrUB4";
+    showMovieList: boolean = false;
 
     httpPayload: any[] = [{
         movieTitle: "X-Men Apocalypse",
@@ -20,7 +21,7 @@ export class LibraryComponent implements OnInit {
     {
         movieTitle: "Iron Man 3",
         movieDescription: " Still traumatized by the events of \"The Avengers,\" Iron Man battles an enigmatic terrorist called the Mandarin with the help of Col. James Rhodes and a precocious young boy in this thrill-a-minute sequel.",
-        movieLink: "https://www.youtube.com/watch?v=Jer8XjMrUB4",
+        movieLink: "https://www.youtube.com/watch?v=oYSD2VQagc4",
         videoHtml: ""
     },
     {
@@ -45,6 +46,10 @@ export class LibraryComponent implements OnInit {
     }
 
     ngOnInit() {
+    }
+
+    ngAfterViewInit() {
+        this.showMovieList = true;
     }
 
 }
