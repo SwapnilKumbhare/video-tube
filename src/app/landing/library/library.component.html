@@ -1,84 +1,18 @@
 <header id="library-section">
     <div class="dark-overlay">
-        <div class="library-inner">
+        <div class="p-2">
             <div class="container">
                 <div class="row">
-
-                    <div id="carouselLibraryControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <!-- <div id="carouselLibraryControls" class="carousel slide" data-ride="carousel" data-interval="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <!-- Swapnil -->
-                                <!-- <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="card mb-4 box-shadow">
-                                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"
-                                                style="height: 225px; width: 100%; display: block;" src="" data-holder-rendered="true">
-                                            <div class="card-body">
-                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                                                    content. This content is a little bit longer.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
-                                                    </div>
-                                                    <small class="text-muted">9 mins</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-4 box-shadow">
-                                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"
-                                                style="height: 225px; width: 100%; display: block;" src="" data-holder-rendered="true">
-                                            <div class="card-body">
-                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                                                    content. This content is a little bit longer.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
-                                                    </div>
-                                                    <small class="text-muted">9 mins</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-4 box-shadow">
-                                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"
-                                                style="height: 225px; width: 100%; display: block;" src="" data-holder-rendered="true">
-                                            <div class="card-body">
-                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                                                    content. This content is a little bit longer.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
-                                                    </div>
-                                                    <small class="text-muted">9 mins</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="card mb-4 box-shadow">
-                                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"
-                                                style="height: 225px; width: 100%; display: block;" src="" data-holder-rendered="true">
-                                            <div class="card-body">
-                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                                                    content. This content is a little bit longer.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
-                                                    </div>
-                                                    <small class="text-muted">9 mins</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="library-content">
                                     <div class="card-sec">
                                         <div class="card">
                                             <div class="">
+                                                <!-- swapnil ->
+                                                <div [innerHtml]="iframe_html"></div>
+                                                <!-- swapnil ->
                                                 <img class="card-img-top mb-1 float-left m-1" src="./assets/img/sharephoto.jpg" alt="Card image cap">
                                                 <div class="card-desc d-block float-right m-1">
                                                     <h4>Movie Title</h4>
@@ -93,10 +27,8 @@
                                             <a class="btn btn-primary float-right m-1">Play Trailer</a>
                                         </div>
                                     </div>
-
                                 </div>
 
-                                <!-- Swapnil margin-bottom: 0.75rem;-->
 
                             </div>
                             <div class="carousel-item">
@@ -118,8 +50,27 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    </div>
+                    </div> -->
 
+                    <div class="w-100 library-content">
+                        <div class="card-sec p-2" *ngFor="let payLoad of httpPayload">
+                            <div class="card">
+                                <div class="p-3">
+                                    <div class="d-inline custom-frame" [innerHtml]="iframe_html"></div>
+                                    <div class="card-desc d-block float-right m-1">
+                                        <h4>{{payLoad.movieTitle}}</h4>
+                                        <p>{{payLoad.movieDescription}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-block">
+                                <a class="btn btn-primary m-1">Play Trailer</a>
+                                <a class="btn btn-primary float-right m-1">Rent and Watch >></a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>

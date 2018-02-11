@@ -10,6 +10,7 @@ import { SignInComponent } from './login/sign-in/sign-in.component';
 import { SignUpComponent } from './login/sign-up/sign-up.component';
 import { LibraryComponent } from './landing/library/library.component';
 import { MarketComponent } from './landing/market/market.component';
+import { EmbedVideoService } from './_shared/embed-video.service';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,9 @@ import { MarketComponent } from './landing/market/market.component';
         HttpModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [
+        EmbedVideoService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

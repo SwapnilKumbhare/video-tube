@@ -29,10 +29,6 @@ body {
     padding-top: 0px;
 }
 
-#library-section {
-    // background-color: #000;
-}
-
 .btn-primary {
     background-color: $primary-color;
     border-color: $primary-color;
@@ -63,12 +59,6 @@ body {
         padding: 4px;
         border-radius: 4px;
         font-size: $icon-size;
-    }
-}
-
-#library-section {
-    .library-inner {
-        padding-top: 10px;
     }
 }
 
@@ -117,4 +107,17 @@ body {
 
 .action-block {
     border-top: 1px solid $bg-color;
+}
+
+.padding-top-80 {
+    padding-top: 60px;
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    .nav-item {
+        font-size: 1rem;
+    }
 }
