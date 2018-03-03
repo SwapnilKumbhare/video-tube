@@ -64,7 +64,7 @@ export class EmbedVideoService {
 
         return this.sanitize_iframe('<iframe src="//www.youtube.com/embed/'
             + id + options.query + '"' + options.attr
-            + ' frameborder="0" style="width: 40%; height: 100%;" allowfullscreen></iframe>');
+            + ' frameborder="0" style="width: 100%; height: 100%;" allowfullscreen></iframe>');
     }
 
     public embed_vimeo(id: string, options?: any): string {

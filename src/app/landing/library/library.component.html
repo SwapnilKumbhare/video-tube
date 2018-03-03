@@ -6,9 +6,11 @@
                     <div class="w-100 library-content" *ngIf="showMovieList">
                         <div class="card-sec p-2" *ngFor="let payLoad of httpPayload">
                             <div class="card">
-                                <div class="p-3">
-                                    <div class="d-inline custom-frame" [innerHtml]="payLoad.videoHtml"></div>
-                                    <div class="card-desc d-block float-right m-1">
+                                <div class="p-3 d-inline custom-frame">
+                                    <div [innerHtml]="payLoad.videoHtml"></div>
+                                </div>
+                                <div class="p-3 card-desc d-inline">
+                                    <div class="d-none d-sm-none d-md-block float-right m-1">
                                         <h4>{{payLoad.movieTitle}}</h4>
                                         <p>{{payLoad.movieDescription}}
                                         </p>

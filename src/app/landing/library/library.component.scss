@@ -5,14 +5,19 @@
     .card {
         background-color: #000;
         border-radius: 0;
+        flex-direction: unset;
     }
     .card-desc {
         width: 58%;
     }
 }
 
-@media (min-width: 576px) {
-    .card-desc {
-        display: hidden;
+.custom-frame {
+    width: 40%;
+}
+
+@media (max-width: 576px) {
+    .custom-frame {
+        min-width: 100%;
     }
 }
