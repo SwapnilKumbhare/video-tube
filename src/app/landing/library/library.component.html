@@ -4,22 +4,24 @@
             <div class="container">
                 <div class="row">
                     <div class="w-100 library-content" *ngIf="showMovieList">
-                        <div class="card-sec p-2" *ngFor="let payLoad of httpPayload">
+                        <div class="card-sec mt-2 mb-3" *ngFor="let payLoad of httpPayload">
                             <div class="card">
-                                <div class="p-3 d-inline custom-frame">
+                                <div class="p-2 d-inline custom-frame">
                                     <div [innerHtml]="payLoad.videoHtml"></div>
                                 </div>
-                                <div class="p-3 card-desc d-inline">
-                                    <div class="d-none d-sm-none d-md-block float-right m-1">
+                                <div class="p-2 card-desc d-inline">
+                                    <div class="d-none d-sm-none d-md-block m-1">
                                         <h4>{{payLoad.movieTitle}}</h4>
                                         <p>{{payLoad.movieDescription}}
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="action-block">
-                                <a class="btn btn-primary m-1">Play Trailer</a>
-                                <a class="btn btn-primary float-right m-1">Rent and Watch >></a>
+                            <div class="p-1 d-block d-sm-block d-md-none card-footer margin-top-rev-10 col-12 text-center">
+                                <h4>{{payLoad.movieTitle}}</h4>
+                            </div>
+                            <div class="margin-top-2 btn btn-custom btn-primary col-12">
+                                <h5 class="mb-1">Rent and Watch</h5>
                             </div>
                         </div>
                     </div>
