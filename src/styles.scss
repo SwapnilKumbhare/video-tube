@@ -1,10 +1,11 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 $fa-font-path: "../node_modules/font-awesome/fonts";
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
-$bg-color: #333;
+$bg-primary-color: #fff;
 $bg-secondary-color: #000;
 $font-color: #fff;
-$primary-color: #de005d;
+$primary-color: rgb(2, 17, 29);
+$secondary-color: rgb(168, 50, 121);
 $bg-success-color: #28a745;
 $dark-overlay: rgba(0, 0, 0, 0.31);
 $icon-size: 30px;
@@ -14,13 +15,23 @@ $width-250-px: 250px;
 $shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+$grad-background: linear-gradient(to right, rgb(2, 17, 29), rgb(168, 50, 121), rgb(2, 17, 29));
 body {
-    background-color: $bg-color;
+    background-color: $bg-primary-color;
     color: $font-color;
 }
 
+.card,
+.card-footer {
+    background: $grad-background;
+}
+
+.bg-dark {
+    background-color: $primary-color !important;
+}
+
 .navbar {
-    border-bottom: $primary-color 3px solid;
+    border-bottom: $secondary-color 3px solid;
     opacity: 0.8;
 }
 
@@ -36,6 +47,11 @@ body {
 .btn-primary {
     background-color: $primary-color;
     border-color: $primary-color;
+}
+
+.btn-secondary {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
 }
 
 #home-section {
@@ -104,24 +120,23 @@ body {
     }
     button {
         margin-left: -8px;
-        background-color: $bg-color;
+        background-color: $bg-primary-color;
         border-radius: 0 0.25rem 0.25rem 0;
     }
 }
 
 .top-border-1 {
-    border-top: 1px solid $bg-color;
+    border-top: 1px solid $bg-primary-color;
 }
 
 .top-border-2 {
-    border-top: 2px solid $bg-color;
+    border-top: 2px solid $bg-primary-color;
 }
 
 .card-sec {
-    box-shadow: $shadow;
-    .card-footer {
-        background-color: $bg-secondary-color;
-    }
+    box-shadow: $shadow; // .card-footer {
+    //     background-color: $bg-secondary-color;
+    // }
 }
 
 .margin-top-2 {
