@@ -132,8 +132,13 @@ body {
     border-top: 2px solid $bg-primary-color;
 }
 
+.top-border-0 {
+    border-top: 0px;
+}
+
 .card-sec {
     box-shadow: $shadow;
+    background-color: $primary-color;
 }
 
 .margin-top-2 {
@@ -154,9 +159,8 @@ body {
 }
 
 .btn-primary:hover {
-    opacity: 0.8;
-    background-color: $primary-color;
-    border-color: $primary-color;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,
